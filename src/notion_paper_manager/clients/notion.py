@@ -103,6 +103,8 @@ class NotionClient:
         }
 
         if url:
+            print(url)
+            print(file_local_path)
             props["URL"] = {"url": url}
 
         if file_local_path:

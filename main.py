@@ -36,10 +36,10 @@ def run(arxiv_id: str | None, pdf: str | None, add_to_notion: bool, extract_figu
 
     if add_to_notion:
         nc = NotionClient()
-        if extract_figures :
-            page = nc.add_paper(settings.main.database_id, meta['title'], meta['authors'] or [], meta['year'] or 0, meta['pdf_url'],pdf_path,stats['figure_dir'], stats['table_dir'])
-        else :
-            page = nc.add_paper(settings.main.database_id, meta['title'], meta['authors'] or [], meta['year'] or 0, meta['pdf_url'])
+        if pdf:
+            page = nc.add_paper(settings.main.database_id, meta['title'], meta['authors'] or [], meta['year'] or 0,None,pdf_path,stats['figure_dir'], stats['table_dir'])
+        else:
+            page = nc.add_paper(settings.main.database_id, meta['title'], meta['authors'] or [], meta['year'] or 0,meta['pdf_url'],pdf_path,stats['figure_dir'], stats['table_dir'])
         print(f"[notion] page_id={page.get('id')}")
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@
     overflow: hidden;                 
     display: inline-block;">
     <img src="image/avatar.png" alt="Notion Paper Manager avatar"
-         style="width:100%; height:100%; object-fit:cover;">
+         style="width:50%; height:50%; object-fit:cover;">
   </div>
 </div>
 
@@ -33,11 +33,11 @@ It extracts metadata (title, authors, year, figures, tables, etc.) from **Arxiv*
 
 ### 1. Create `Database`
 
-![make Database](../bottle-an00.github.io/assets/images/README/create_Database_Fullpage.png)
+![make Database](./image/create_Database_Fullpage.png)
 
 Create block with `Database - Full page` 
 
-![Database made](../bottle-an00.github.io/assets/images/README/Database made.png)
+![Database made](./image/Database made.png)
 
 <BR>
 
@@ -60,15 +60,15 @@ properties:
 
 [Create a Notion Integration](https://developers.notion.com/docs/create-a-notion-integration) 
 
-![createIntegration](../bottle-an00.github.io/assets/images/README/create Integration.png)
+![createIntegration](./image/create Integration.png)
 
 
 
-![IntegrationSetting](../bottle-an00.github.io/assets/images/README/Integrationsetting.png)
+![IntegrationSetting](./image/Integrationsetting.png)
 
 - Connect `Integration` to your `Database`
 
-![connectIntegration](../bottle-an00.github.io/assets/images/README/connectIntegration.png)
+![connectIntegration](./image/connectIntegration.png)
 
 <BR>
 
@@ -76,11 +76,11 @@ properties:
 
 - get notion token
 
-![getnotiontoken](../bottle-an00.github.io/assets/images/README/Integration_secret.png)
+![getnotiontoken](./image/Integration_secret.png)
 
 - get Database ID
 
-![getdatabaseID](../bottle-an00.github.io/assets/images/README/getDatabaseID.png)
+![getdatabaseID](./image/getDatabaseID.png)
 
 The copied link looks like `https://www.notion.so/{your_database_id}?v=...`
 
@@ -138,7 +138,7 @@ pthon main.py --arxiv-id <arxiv_id> --extract-figures --add-to-notion --device c
 
 ## <br>😚 Result
 
-![](../bottle-an00.github.io/assets/images/README/RESULT.png)
+![result](./image/RESULT.png)
 
 <br>
 

@@ -37,7 +37,7 @@ It extracts metadata (title, authors, year, figures, tables, etc.) from **Arxiv*
 
 Create block with `Database - Full page` 
 
-![Database made](./image/Database made.png)
+![Database made](./image/Database_made.png)
 
 <BR>
 
@@ -60,7 +60,7 @@ properties:
 
 [Create a Notion Integration](https://developers.notion.com/docs/create-a-notion-integration) 
 
-![createIntegration](./image/create Integration.png)
+![createIntegration](./image/create_Integration.png)
 
 
 

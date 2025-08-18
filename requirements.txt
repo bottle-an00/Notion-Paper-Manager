@@ -4,4 +4,3 @@ arxiv
 pypdf
 docling
 pyyaml
-mimetypes

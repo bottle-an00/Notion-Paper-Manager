@@ -1,14 +1,7 @@
-<div align="center">
-  <div style="
-    width: 180px; height: 180px;
-    border: 4px solid #e5e7eb;      
-    border-radius: 50%;              
-    overflow: hidden;                 
-    display: inline-block;">
-    <img src="image/avatar.png" alt="Notion Paper Manager avatar"
-         style="width:50%; height:50%; object-fit:cover;">
-  </div>
-</div>
+<p align="center">
+  <img src="image/avatar.png" alt="avatar" width="180" height="180">
+</p>
+
 
 # 📘 Notion Paper Manager
 
@@ -29,7 +22,7 @@ It extracts metadata (title, authors, year, figures, tables, etc.) from **Arxiv*
 
 <br>
 
-## <i class="fa-brands fa-notion"></i> Notion Database Setting
+## ![notion_icon](/home/jba/Notion-Paper-Manager/image/notion_icon.png)Notion Database Setting
 
 ### 1. Create `Database`
 

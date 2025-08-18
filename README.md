@@ -22,7 +22,7 @@ It extracts metadata (title, authors, year, figures, tables, etc.) from **Arxiv*
 
 <br>
 
-## ![notion_icon](/home/jba/Notion-Paper-Manager/image/notion_icon.png)Notion Database Setting
+## ![notion_icon](./image/notion_icon.png)Notion Database Setting
 
 ### 1. Create `Database`
 

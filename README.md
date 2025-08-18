@@ -121,7 +121,7 @@ python main.py --arxiv-id <arxiv_id> --extract-figures --add-to-notion --device 
 python main.py --pdf <your pdf dir> --extract-figures --add-to-notion --device cuda
 ```
 
-- Running on CPU is possible, but it may take a long time.
+- Running on CPU is possible.
 
 ```bash
 pthon main.py --arxiv-id <arxiv_id> --extract-figures --add-to-notion --device cpu

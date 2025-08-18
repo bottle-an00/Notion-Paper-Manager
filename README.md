@@ -84,7 +84,7 @@ The copied link looks like `https://www.notion.so/{your_database_id}?v=...`
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<USERNAME>/Notion-Paper-Manager.git
+git clone https://github.com/bottle-an00/Notion-Paper-Manager.git
 cd Notion-Paper-Manager
 ```
 

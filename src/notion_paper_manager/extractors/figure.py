@@ -10,16 +10,16 @@ from docling_core.types.doc import PictureItem, TableItem
 def _passes_filters(img, *,
                     min_width=100,       # 최소 가로(px)
                     min_height=100,      # 최소 세로(px)
-                    min_area=60_000,     # 최소 면적(px^2)
-                    min_ar=0.2,          # 최소 가로세로비 (w/h)
-                    max_ar=10.0):         # 최대 가로세로비 (w/h)
+                    min_area=10_000,     # 최소 면적(px^2)
+                    min_ar=0.2          # 최소 가로세로비 (w/h)
+                    ):         
     w, h = img.size
     if w < min_width or h < min_height:
         return False
     if w * h < min_area:
         return False
     ar = w / h if h else 0
-    if not (min_ar <= ar <= max_ar):
+    if not (ar >= min_ar):
         return False
     return True
 
@@ -43,17 +43,18 @@ def run_docling_pipeline(pdf_source: str, outdir: Path, device: str) -> list[Pat
     conv = converter.convert(pdf_source)
 
     pic_idx, tbl_idx = 0, 0
+    figure_dir = outdir / Path("figures")
+    table_dir = outdir / Path("tables")
     for elem, _level in conv.document.iterate_items():
         if isinstance(elem, PictureItem):
             img = elem.get_image(conv.document)
             if _passes_filters(img):
                 pic_idx += 1
-                figure_dir = outdir / Path("figures")
                 figure_dir.mkdir(parents=True, exist_ok=True)
                 with (figure_dir / f"figure-{pic_idx}.png").open("wb") as fp:
                     elem.get_image(conv.document).save(fp, "PNG")
 
-        table_dir = outdir / Path("tables")
+        
         table_dir.mkdir(parents=True, exist_ok=True)
         if isinstance(elem, TableItem):
             tbl_idx += 1

@@ -6,6 +6,8 @@ def get_pdf_meta(pdf_path : Path):
     reader = PdfReader(pdf_path)
     info = reader.metadata
     title = info.title if info.title else None
+    if title == None: 
+        title = str(pdf_path)[5:]
     author = info.author if info.author else None
     creation_date = info.get('/CreationDate')
     year = 0

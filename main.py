@@ -46,8 +46,8 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--arxiv-id", type=str)
     p.add_argument("--pdf", type=str)
-    p.add_argument("--add-to-notion", action="store_true")
-    p.add_argument("--extract-figures", action="store_true")
+    p.add_argument("--add-to-notion", default=True, action="store_true")
+    p.add_argument("--extract-figures", default=True, action="store_true")
     p.add_argument("--device", type=str, default="cuda", choices=["cuda", "cpu"])
     args = p.parse_args()
 

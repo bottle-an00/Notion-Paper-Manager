@@ -112,7 +112,7 @@ class NotionClient:
                 upload_id = self._upload_local_file(Path(file_local_path))
                 props["PDF"] = {"files": [{
                     "type": "file_upload",
-                    "name": Path(file_local_path).name,
+                    "name": Path(file_local_path).name[:90],
                     "file_upload": {"id": upload_id}
                 }]}
 
